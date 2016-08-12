@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Sm-l4d2-superboomer : Make Boomer do a super charged rocket jump.  I got this inspiration from ztar&#39;s lethal weapon plugin. Credit goes to ztar for his particle code. Also added support for game instructor hints (code snippet was based from DJ_WEST&#39;s Witch Control Plugin)">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Sm-l4d2-superboomer</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/ribasco/sm-l4d2-superboomer">View on GitHub</a>
+
+          <h1 id="project_title">Sm-l4d2-superboomer</h1>
+          <h2 id="project_tagline">Make Boomer do a super charged rocket jump.  I got this inspiration from ztar&#39;s lethal weapon plugin. Credit goes to ztar for his particle code. Also added support for game instructor hints (code snippet was based from DJ_WEST&#39;s Witch Control Plugin)</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/ribasco/sm-l4d2-superboomer/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/ribasco/sm-l4d2-superboomer/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="sm-l4d2-superboomer" class="anchor" href="#sm-l4d2-superboomer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>sm-l4d2-superboomer</h1>
+
+<p>Make Boomer do a super charged rocket jump.  I got this inspiration from ztar's lethal weapon plugin. Credit goes to ztar for his particle code. Also added support for game instructor hints (code snippet was based from DJ_WEST's Witch Control Plugin)</p>
+
+<h1>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h1>
+
+<ul>
+<li>Super charged rocket jump</li>
+<li>Special Attack (When attack button is pressed, boomer descends faster)</li>
+<li>Particle Effects while charging and upon activation of the charge</li>
+<li>Boomer can move while puking</li>
+</ul>
+
+<h1>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h1>
+
+<p>This plugin requires SDKHooks v1.3 or above</p>
+
+<h1>
+<a id="cvars" class="anchor" href="#cvars" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CVARS</h1>
+
+<h2>
+<a id="general" class="anchor" href="#general" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>General</h2>
+
+<ul>
+<li>sm_superboomer_version - Plugin Version</li>
+<li>sm_sb_debug (0 = Disable / 1 = Enable / 2 = Enable for Admins Only) - Enable/Disable Debug Mode.</li>
+<li>sm_sb_chargetime - Number of seconds to wait before activating (Max : 60s, Default values is 5 seconds)</li>
+<li>sm_sb_chargeexpire - Number of seconds before charge expires (Max: 60s, Default value is 1.5secs)</li>
+<li>sm_sb_effects (0 = Disable / 1 = Enable) - Enable/Disable Particle Effects (Depreceated)</li>
+<li>sm_sb_explode (0 = Disable / 1 = Enable) - Make boomer explode upon impact (Default is 0)</li>
+<li>sm_sb_gravity - The gravity to set for the jump boost (Default gravity is set to 0.06.)</li>
+<li>sm_sb_hint - (0 = Disable, 1 = Chat, 2 = Game Instructor Hint, 3 = Both) Set which type of hints should be displayed for users</li>
+<li>sm_sb_specialattack (0 = Disable / 1 = Enable) - Enable/Disable Speed Drop</li>
+<li>sm_sb_pukemove <strong>NEW</strong> (0 = Disable, 1 = Enable) - Allow boomer to move while puking</li>
+</ul>
+
+<h2>
+<a id="cvars-for-customizing-particlesound-effects" class="anchor" href="#cvars-for-customizing-particlesound-effects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CVARS for customizing Particle/Sound effects</h2>
+
+<p><em>Warning: Do not bother modifying these cvars unless you want to customize you're own particle/sound effects. Some particles can be quite heavy and sometimes causes clients to crash.</em></p>
+
+<ul>
+<li>sm_sb_pathpe_charge - Path of particle effect for Boomer Charge</li>
+<li>sm_sb_pathpe_jump - Path of particle effect for Boomer Jump</li>
+<li>sm_sb_pathpe_land - Path of particle effect for Boomer Land</li>
+<li>sm_sb_pathse_charge - Path for sound effect when charging</li>
+<li>sm_sb_pathse_fail - Path for sound effect on charge fail</li>
+<li>sm_sb_pathse_jump - Path for sound effect on initial jump</li>
+<li>sm_sb_pathse_land - Path for sound effect on landing</li>
+<li>sm_sb_pathse_ready - Path for sound effect on charge readiness indication</li>
+<li>sm_sb_pathse_special - Path for sound effect on special attack ability</li>
+<li>sm_sb_pathse_warcry - Path for sound effect for WAR CRY</li>
+</ul>
+
+<h2>
+<a id="cvars-for-enablingdisabling-particlesound-effects" class="anchor" href="#cvars-for-enablingdisabling-particlesound-effects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CVARS For Enabling/Disabling Particle/Sound Effects</h2>
+
+<ul>
+<li>sm_sb_pecharge - (0 = Disable, 1 = Enabled) Enable/Disable Particle Effects when Charging</li>
+<li>sm_sb_pejump - (0 = Disable, 1 = Enabled) Enable/Disable Particle Effects when Jumping</li>
+<li>sm_sb_peland - (0 = Disable, 1 = Enabled) Enable/Disable Particle Effects when Landing</li>
+<li>sm_sb_secharge - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects when Charging</li>
+<li>sm_sb_sefail - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects after a failed charged attempt</li>
+<li>sm_sb_sejump - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects when Jumping</li>
+<li>sm_sb_seland - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects when Landing</li>
+<li>sm_sb_sespecatk - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects for Special Speed Attack Ability</li>
+<li>sm_sb_sewarcry - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects for War Cry (Occurs during the jump)</li>
+</ul>
+
+<h1>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to Use</h1>
+
+<ul>
+<li>Crouch for N seconds (this is defined by the cvar) then jump upon activation. Proper timing of the jump is crucial to make a successful super rocket jump.</li>
+<li>To make boomer rocket jump to the desired direction, just hold down the DIRECTIONAL KEYS (W-A-S-D) prior to the jumping.</li>
+<li>While on mid-air, press the ATTACK (By default, that is your left mouse button) key to descend faster to the ground</li>
+<li>If any of you are curious on what to put on the particle effects cvars, I will try to compile a list of all particle effects in Left 4 Dead 2...but for the meantime, you can use the particle browser through the "Left 4 Dead 2 (Tools Mode)" under "Left 4 Dead 2 Authoring Tools". Just take note that you will need the Authoring tools installed for you to access the particle browser.</li>
+</ul>
+
+<h1>
+<a id="demo-video" class="anchor" href="#demo-video" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DEMO Video</h1>
+
+<p><em>made by blackalegator</em>
+<a href="http://www.youtube.com/watch?v=12v_nHkcZT4">http://www.youtube.com/watch?v=12v_nHkcZT4</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Sm-l4d2-superboomer maintained by <a href="https://github.com/ribasco">ribasco</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

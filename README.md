@@ -29,28 +29,30 @@ Make Boomer do a super charged rocket jump.  I got this inspiration from ztar's 
 
 > Warning: Do not bother modifying these cvars unless you want to customize you're own particle/sound effects. Some particles can be quite heavy and sometimes causes clients to crash.
 
-sm_sb_pathpe_charge - Path of particle effect for Boomer Charge
-sm_sb_pathpe_jump - Path of particle effect for Boomer Jump
-sm_sb_pathpe_land - Path of particle effect for Boomer Land
-sm_sb_pathse_charge - Path for sound effect when charging
-sm_sb_pathse_fail - Path for sound effect on charge fail
-sm_sb_pathse_jump - Path for sound effect on initial jump
-sm_sb_pathse_land - Path for sound effect on landing
-sm_sb_pathse_ready - Path for sound effect on charge readiness indication
-sm_sb_pathse_special - Path for sound effect on special attack ability
-sm_sb_pathse_warcry - Path for sound effect for WAR CRY
+- sm_sb_pathpe_charge - Path of particle effect for Boomer Charge
+- sm_sb_pathpe_jump - Path of particle effect for Boomer Jump
+- sm_sb_pathpe_land - Path of particle effect for Boomer Land
+- sm_sb_pathse_charge - Path for sound effect when charging
+- sm_sb_pathse_fail - Path for sound effect on charge fail
+- sm_sb_pathse_jump - Path for sound effect on initial jump
+- sm_sb_pathse_land - Path for sound effect on landing
+- sm_sb_pathse_ready - Path for sound effect on charge readiness indication
+- sm_sb_pathse_special - Path for sound effect on special attack ability
+- sm_sb_pathse_warcry - Path for sound effect for WAR CRY
+
 
 ### CVARS For Enabling/Disabling Particle/Sound Effects
 
-sm_sb_pecharge - (0 = Disable, 1 = Enabled) Enable/Disable Particle Effects when Charging
-sm_sb_pejump - (0 = Disable, 1 = Enabled) Enable/Disable Particle Effects when Jumping
-sm_sb_peland - (0 = Disable, 1 = Enabled) Enable/Disable Particle Effects when Landing
-sm_sb_secharge - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects when Charging
-sm_sb_sefail - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects after a failed charged attempt
-sm_sb_sejump - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects when Jumping
-sm_sb_seland - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects when Landing
-sm_sb_sespecatk - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects for Special Speed Attack Ability
-sm_sb_sewarcry - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects for War Cry (Occurs during the jump)
+- sm_sb_pecharge - (0 = Disable, 1 = Enabled) Enable/Disable Particle Effects when Charging
+- sm_sb_pejump - (0 = Disable, 1 = Enabled) Enable/Disable Particle Effects when Jumping
+- sm_sb_peland - (0 = Disable, 1 = Enabled) Enable/Disable Particle Effects when Landing
+- sm_sb_secharge - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects when Charging
+- sm_sb_sefail - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects after a failed charged attempt
+- sm_sb_sejump - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects when Jumping
+- sm_sb_seland - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects when Landing
+- sm_sb_sespecatk - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects for Special Speed Attack Ability
+- sm_sb_sewarcry - (0 = Disable, 1 = Enabled) Enable/Disable Sound Effects for War Cry (Occurs during the jump)
+
 
 ## How to Use
 - Crouch for N seconds (this is defined by the cvar) then jump upon activation. Proper timing of the jump is crucial to make a successful super rocket jump.
